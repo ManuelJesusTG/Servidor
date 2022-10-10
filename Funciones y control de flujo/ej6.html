@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="x">
+        <input type="number" id="y">
+        <input type="number" id="z">
+        <button type="button" onclick="mayor()">Calcular</button>
+    </form>
+
+    <script>
+        function mayor(){
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            let z = document.getElementById("z").value;
+
+            if (x>y && x>z){
+                alert("el mayor es "+x);
+            } else if (y>x && y>z){
+                alert("el mayor es "+y)
+            } else if (z>x && z>y){
+                alert("el mayor es "+z)
+            } else{
+                alert("Hay numeros repetidos")
+            }
+
+        }
+    </script>
+</body>
+</html>

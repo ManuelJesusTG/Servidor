@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="">Sueldo</label>
+        <input type="number" name="sueldo" id="sueldo">€  
+        <label for="">Antigüedad</label>
+        <input type="number" name="antiguedad" id="antiguedad"> años
+        <button type="button" id="boton" onclick="calculo()">Calcular</button>
+    </form>
+
+    <h4 id="salida"></h4>
+
+    <script>
+        function calculo(){
+            let sueldo = document.getElementById("sueldo").value;
+            let antiguedad = document.getElementById("antiguedad").value;
+            let nSueldo;
+            if (sueldo>1000 && antiguedad>=10){
+                nSueldo= sueldo+(sueldo*20/100);
+                document.getElementById("salida").innerHTML = "Su sueldo ha aumentado un 20% = "+nSueldo+"€";
+            } else if (sueldo<1000 && antiguedad<10){
+                nSueldo= sueldo+(sueldo*5/100);
+                document.getElementById("salida").innerHTML = "Su sueldo ha aumentado un 5% = "+nSueldo+"€";
+            } else if (sueldo >= 1000){
+                document.getElementById("salida").innerHTML = "Su sueldo es "+sueldo+"€";
+            }
+        }
+    </script>
+</body>
+</html>

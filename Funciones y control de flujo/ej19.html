@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Mes:</label>
+    <input type="text" name="mes" id="mes">
+    <label for="">Año:</label>
+    <input type="number" name="anio" id="anio">
+    <button type="button" onclick="script()"></button>
+    
+    <Script>
+        function script(){
+            let mes = document.getElementById(mes).value;
+        let anio = document.getElementById(anio).value;
+        let mesP = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+        for (let i = 0; i < mesP.length; i++) {
+            if(mesP[i] =mes){
+                let x = mesP[i];
+                break;
+            }
+        }
+        if ((anio%4)=0 && x == "Febrero"){
+            alert("El mes tiene 29 dias");
+        } else if(x = "Febrero"){
+            alert("El mes tiene 28 dias");
+        } else if(x = "Enero","Marzo,","Mayo","Julio","Agosto","Octubre","Diciembre"){
+            alert("El mes tiene 31 dias");
+        } else if(x = "Abril","Junio","Septiembre","Noviembre"){
+            alert("El mes tiene 30 dias");
+        }
+        }
+    </Script>
+</body>
+</html>

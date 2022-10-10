@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <p>Introduce un numero positivo de uno o dos digitos</p> <br>
+    <form action="">
+        <input type="number" id="numero">
+        <button type="button" id="boton" onclick="comprobar()" >comprobar</button>
+
+        <script>
+            function comprobar(){
+                let numero = document.getElementById("numero").value
+            
+            if (numero<=9 && numero>=0){
+                alert("el numero tiene 1 solo digito")
+            } else if(numero>=10 && numero<=99){
+                alert("el numero tiene 2 digitos")
+            } else{
+                alert("el numero introducido no es valido")
+            }
+            }
+        </script>
+    </form>
+</body>
+</html>

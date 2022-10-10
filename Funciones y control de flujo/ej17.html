@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+</head>
+<body>
+
+    <form>
+        <label>Nombre del Aspirante</label>
+        <input type="text" name="nombre" id="nombre">
+        <label>Preguntas respondidas</label>
+        <input type="number" name="preguntas" id="preguntas">
+        <label>Preguntas acertadas</label>
+        <input type="number" name="aciertos" id="aciertos">
+        <button type="button" id="boton" onclick="Aciertos()">Calcular</button>
+    </form>
+
+    <h4 id="salida"></h4>
+
+    <script>
+        function Aciertos(){
+        let Nombre = document.getElementById("nombre").value;
+        let total =  document.getElementById("preguntas").value;
+        let aciertos = document.getElementById("aciertos").value;
+        let Respuesta = ((aciertos*100)/total);
+
+        if(Respuesta>=90 && Respuesta <=100){
+            document.getElementById("salida").innerHTML = "El aspirante "+Nombre+" con "+Respuesta+"% de aciertos tiene un nivel: Superior";
+        } else if(Respuesta>=75 && Respuesta<90){
+            document.getElementById("salida").innerHTML = "El aspirante "+Nombre+" con "+Respuesta+"% de aciertos tiene un nivel: Medio";
+        } else if(Respuesta>=50 && Respuesta<75){
+            document.getElementById("salida").innerHTML = "El aspirante "+Nombre+" con "+Respuesta+"% de aciertos tiene un nivel: Bajo";
+        } else if(Respuesta<50 && Respuesta >=0){
+            document.getElementById("salida").innerHTML = "El aspirante "+Nombre+" con "+Respuesta+"% de aciertos esta fuera de nivel";
+        } else {
+            alert("Calculo incorrecto");
+        }
+        }
+    </script>
+</body>
+</html>

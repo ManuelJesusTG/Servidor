@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="x">
+        <input type="number" id="y">
+        <button type="button" onclick="mayor()">Calcular</button>
+    </form>
+    <script>
+        function mayor(){
+        let x = document.getElementById("x").value;
+        let y = document.getElementById("y").value;
+
+
+        if (x>y) {
+            alert(x+" Es mayor");
+        } else if (y>x){
+            alert(y+" Es mayor");
+        } else if(x=y){
+            alert("Ambos numeros son iguales");
+        } else {
+            alert ("Los valores introducidos no son validos");
+        }
+     }
+    </script>
+</body>
+</html>

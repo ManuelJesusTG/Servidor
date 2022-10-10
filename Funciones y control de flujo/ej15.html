@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    
+    <form action="">
+        <label>Introduce un dia de la semana</label>
+        <input type="text" name="dia" id="dia">
+        <button type="button" onclick="Siguiente()">Ver dia Siguiente</button>
+    </form>
+
+    <Script>
+        function Siguiente(){
+            let dia = document.getElementById("dia").value;
+            let vector = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+
+            for (let i = 0; i < vector.length; i++) {
+                if (vector[i]=dia){
+                    let x = i++;
+                    alert("El dia siguiente es "+vector[x]);
+                    break;
+                }
+            }
+        }
+    </Script>
+</body>
+</html>

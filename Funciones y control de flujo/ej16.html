@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+</head>
+<body>
+
+    <Form>
+        <label for="">Introduce 3 valores iguales</label>
+        <input type="number" id="x", name="x">
+        <input type="number" name="y" id="y">
+        <input type="number" name="z" id="z">
+        <button type="button" onclick="funcion()">Calcular</button>
+    </Form>
+    
+    <script>
+        function funcion(){
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var z = document.getElementById("z").value;
+
+            alert("El resultado de la suma del primero por el segundo es "+(parseInt(x)+parseInt(y)))
+            alert("El resultado final del resultado por el tercero es "+ parseInt(z)*(parseInt(x)+parseInt(y)))
+        }
+    </script>
+</body>
+</html>

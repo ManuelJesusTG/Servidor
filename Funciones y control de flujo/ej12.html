@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" name="numero" id="numero">
+        <button id="boton" type="button" onclick="ParImpar()">Comprobar</button>
+    </form>
+
+    <script>
+        function ParImpar(){
+            let numero = document.getElementById("numero").value;
+            let resultado = numero%2;
+        if(resultado==1){
+            alert("el numero es impar");
+        } else if(resultado==0){
+            alert("el numero es par");
+        } else {
+            alert("el numero no es valido");
+        }
+        }
+    </script>
+</body>
+</html>
